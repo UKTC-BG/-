@@ -1,0 +1,43 @@
+package SORTIN_ALGORYTHMS.MERGE_SORT_184_02;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+import static SORTIN_ALGORYTHMS.MERGE_SORT_184_02.MergeSort_Methods.*;
+
+
+public class MergeSort_Main {
+
+
+    // MAIN METHOD ///////////////////////////////////////////////////////
+    public static void main(String[] args) {
+        Scanner Input = new Scanner(System.in);
+
+        System.out.println("Input number of elements : ");
+        //int N = Input.nextInt();
+        int N = Integer.parseInt(Input.nextLine());
+        int[] arr = new int[N];
+
+        for (int i = 0; i < N; i++) {
+
+            System.out.println("Input element "+ i +": ");
+            arr[i] = Integer.parseInt(Input.nextLine());
+        }
+// ===========================================================================
+
+
+
+        System.out.println("BEFORE MERGE SORT : " + Arrays.toString(arr));
+
+
+        //MergeSort_Methods.Sort(arr,0,arr.length-1);
+        Divide(arr,0,arr.length-1);
+
+
+        System.out.println("AFTER MERGE SORT : " + Arrays.toString(arr));
+
+
+
+    }// emd of main
+
+}// end of class
